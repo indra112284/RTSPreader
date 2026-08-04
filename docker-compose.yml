@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+
+  rtsp-reader:
+
+    build: .
+
+    container_name: rtsp-reader
+
+    restart: unless-stopped
+
+    volumes:
+      - ./logs:/app/logs
+      - ./snapshots:/app/snapshots
+
+    stdin_open: true
+
+    tty: true
