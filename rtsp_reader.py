@@ -144,8 +144,8 @@ def run_rtsp_reader():
             # ------------------------------------------
             # Display Video
             # ------------------------------------------
-
-            cv2.imshow(WINDOW_NAME, frame)
+            if os.environ.get("RUNNING_IN_DOCKER") != "true":
+             cv2.imshow(WINDOW_NAME, frame)
 
             # ------------------------------------------
             # Exit Application
