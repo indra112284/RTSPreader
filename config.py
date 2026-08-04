@@ -3,7 +3,7 @@
 # ==========================================================
 
 # RTSP Camera URL
-RTSP_URL = "rtsp://127.0.0.1:8554/live"
+RTSP_URL = "rtsp://host.docker.internal:8554/live"
 
 # Delay before reconnecting (seconds)
 RECONNECT_DELAY = 5

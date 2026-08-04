@@ -1,12 +1,10 @@
-version: "3.9"
-
 services:
-
   rtsp-reader:
-
-    build: .
-
+    image: rtsp-reader:v1.0.1
     container_name: rtsp-reader
+
+    environment:
+      - RUNNING_IN_DOCKER=true
 
     restart: unless-stopped
 
@@ -15,5 +13,4 @@ services:
       - ./snapshots:/app/snapshots
 
     stdin_open: true
-
     tty: true
